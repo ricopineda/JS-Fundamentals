@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> Star String </title>
+		</head>
+		<body>
+			<script type="text/javascript">
+				
+				function starString(num){
+
+					var star = "";
+
+					for( let i = 0; i < num; i ++){
+						star += "*"
+					}
+					return star;
+				}
+				console.log(starString(9))
+				starString(9)
+
+				function drawStars(array){
+
+					var star = [];
+
+					for( let i = 0; i < array.length; i ++){
+						star.push(starString(array[i]))
+					}
+					return star;
+				}
+				console.log(drawStars([3,4,5,3,2]))
+				drawStars([3,4,5,3,2])
+
+
+				function drawMoreStars(array){
+					var star = [];
+
+					for( let i = 0; i < array.length; i ++){
+						if(typeof array[i] === 'number'){
+							star.push(starString(array[i]))
+						}
+						else if(typeof array[i] === 'string'){
+							var string = "";
+							for (let j = 0; j < array[i].length; j++){
+								string += array[i][0].toLowerCase();
+							}
+							star.push(string);
+						}
+					}
+					return star;
+				}
+				console.log(drawMoreStars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]))
+				drawMoreStars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"])
+			</script>
+
+		</body>
+	</html>

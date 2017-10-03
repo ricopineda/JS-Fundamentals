@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> JavaScript Math</title>
+		</head>
+		<body>
+			<script type="text/javascript">
+				
+				function zero_negativity(array){
+
+					for(let i = 0; i < array.length; i ++){
+						if(array[i] < 0){
+							return false;
+						}
+
+					}
+					return true;
+				}
+				console.log(zero_negativity([2,4,5,6]))
+				zero_negativity([2,4,5,6])
+
+
+				function isEven(num) {
+					if (num % 2 === 0) {
+
+						return true;
+					} else {
+						return false;
+					}
+				}
+				console.log(isEven(7))
+				isEven(7)
+
+
+				function how_many_even(array){
+					let count = 0;
+					for(let i = 0; i < array.length; i ++){
+						if ( isEven(array[i])){
+							count += 1;
+						}
+					}
+					return count;
+				}
+				console.log(how_many_even([2,3,4,5,6,7]))
+				how_many_even([2,3,4,5,6,7])
+
+
+
+				function create_dummy_array(num){
+					let array = [];
+					for(let i = 0; i < num; i ++){
+						array.push(Math.floor(Math.random() * 10));
+					}
+					return array;
+				}
+				console.log(create_dummy_array(12))
+				create_dummy_array(12)
+
+
+				function random_choice(array){
+					let ranNum = Math.floor(Math.random() * array.length);
+					return ranNum;
+				}
+				console.log(random_choice([3,4,5,3,6,7,3,7,8,9]))
+				random_choice([3,4,5,3,6,7,3,7,8,9])
+			</script>
+
+		</body>
+	</html>
+
+
+
+
+
+
+
+
+
+
+
